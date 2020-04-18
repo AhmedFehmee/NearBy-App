@@ -11,14 +11,13 @@ credentialProperty.load(new FileInputStream(credentialFile))
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.kotlin.nearPlaces"
+        applicationId "com.fahmy.nearPlaces"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "NEWS_API_KEY", credentialProperty['NEWS_API_KEY'])
     }
     buildTypes {
         debug {
