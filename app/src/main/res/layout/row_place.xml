@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/card_margin"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginTop="@dimen/normal_padding"
+    android:layout_marginEnd="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:layout_marginBottom="@dimen/normal_padding"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_list_item">
+
+        <ImageView
+            android:id="@+id/iv_place_Image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/center_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/image_icon" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/tv_place_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/color_transparent"
+            android:padding="@dimen/normal_padding"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/center_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Place Name" />
+
+        <TextView
+            android:id="@+id/tv_place_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/normal_padding"
+            android:paddingEnd="@dimen/normal_padding"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/textview_size_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/center_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_place_title"
+            tools:text="Place category" />
+
+        <TextView
+            android:id="@+id/tv_place_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/normal_padding"
+            android:paddingEnd="@dimen/normal_padding"
+            android:paddingBottom="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/textview_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/center_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_place_category"
+            tools:text="Place address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
